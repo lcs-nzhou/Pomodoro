@@ -11,7 +11,29 @@ import SwiftUI
 struct PomodoroApp: App {
     var body: some Scene {
         WindowGroup {
-            LandingView()
+            TabView(selection: Binding.constant(1)) {
+                LandingView()
+                    .tabItem{
+                        Image(systemName: "alarm.fill")
+                    }
+                    .tag(1)
+                Text("Journal")
+                    .tabItem {
+                        Image(systemName: "book")
+                    }
+                    .tag(2)
+                Text("achievement")
+                    .tabItem {
+                        Image(systemName: "medal.fill")
+                        
+                    }
+                    .tag(3)
+                Text("Account")
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                    }
+                    .tag(4)
+            }
         }
     }
 }

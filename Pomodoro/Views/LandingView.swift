@@ -9,31 +9,64 @@ import SwiftUI
 
 struct LandingView: View {
     
-    @State var newTag = ""
+    @State var newDescription = ""
     @State var date = Date()
+    @State private var timeRemaining = 60
+    @State private var timerIsRunning = false
+    @State private var timer: Timer?
     
     var body: some View {
         VStack {
             DatePicker("", selection: $date)
                 .datePickerStyle(.wheel)
-            Circle()
-                .foregroundColor(.blue)
-                .frame(maxWidth: 350)
+                .labelsHidden()
+            ZStack {
+                Circle()
+                    .foregroundColor(.white)
+                    .frame(maxWidth: 350)
+                if !timerIsRunning {
+                    Button(action: startTimer) {
+                        Text("Start Timer")
+                            .font(.title)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                } else {
+                    Button(action: stopTimer) {
+                        Text("Stop Timer")
+                            .font(.title)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+            }
             HStack {
                 Text("Tag:")
                 Spacer()
             }
             HStack {
                 Text("Description:")
+                TextField("Enter description", text: $newDescription)
                 Spacer()
             }
-            TextField("Add tag", text: $newTag)
             Spacer()
         }
         .padding()
-        .ignoresSafeArea()
     }
 }
+
+func startTimer() {
+    
+}
+
+func stopTimer() {
+    
+}
+
 
 #Preview {
     TabView(selection: Binding.constant(1)) {
