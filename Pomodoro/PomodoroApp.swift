@@ -22,7 +22,7 @@ struct PomodoroApp: App {
                         Image(systemName: "book")
                     }
                     .tag(2)
-                Text("achievement")
+                Achievement()
                     .tabItem {
                         Image(systemName: "medal.fill")
                         

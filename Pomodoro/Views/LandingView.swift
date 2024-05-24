@@ -11,9 +11,7 @@ struct LandingView: View {
     
     @State var newDescription = ""
     @State var date = Date()
-    @State private var timeRemaining = 60
     @State private var timerIsRunning = false
-    @State private var timer: Timer?
     
     var body: some View {
         VStack {

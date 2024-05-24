@@ -11,6 +11,7 @@
 		740054AD2C00E1C700BAA474 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054AC2C00E1C700BAA474 /* LandingView.swift */; };
 		740054AF2C00E1CA00BAA474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740054AE2C00E1CA00BAA474 /* Assets.xcassets */; };
 		740054B22C00E1CA00BAA474 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740054B12C00E1CA00BAA474 /* Preview Assets.xcassets */; };
+		740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054BB2C00F3D400BAA474 /* Achievement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		740054AC2C00E1C700BAA474 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		740054AE2C00E1CA00BAA474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		740054B12C00E1CA00BAA474 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		740054BB2C00F3D400BAA474 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				740054AC2C00E1C700BAA474 /* LandingView.swift */,
+				740054BB2C00F3D400BAA474 /* Achievement.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				740054AD2C00E1C700BAA474 /* LandingView.swift in Sources */,
 				740054AB2C00E1C700BAA474 /* PomodoroApp.swift in Sources */,
+				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
