@@ -15,7 +15,7 @@ struct LandingView: View {
     
     var body: some View {
         VStack {
-            DatePicker("", selection: $date)
+            DatePicker("", selection: $date, displayedComponents: .hourAndMinute)
                 .datePickerStyle(.wheel)
                 .labelsHidden()
             ZStack {
