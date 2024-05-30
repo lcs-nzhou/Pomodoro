@@ -31,6 +31,14 @@ struct Journal: View {
             }
             .padding()
             VStack{
+                Text("Next study time scheduled")
+                    .background(RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .opacity(0.1)
+                               ) }
+            .padding()
+                                
+            VStack{
                 HStack{
                     Text("May 30 Thu")
                         .padding(.leading)
