@@ -12,6 +12,7 @@
 		740054AF2C00E1CA00BAA474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740054AE2C00E1CA00BAA474 /* Assets.xcassets */; };
 		740054B22C00E1CA00BAA474 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740054B12C00E1CA00BAA474 /* Preview Assets.xcassets */; };
 		740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054BB2C00F3D400BAA474 /* Achievement.swift */; };
+		740054C02C05512100BAA474 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054BF2C05512100BAA474 /* Journal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		740054AE2C00E1CA00BAA474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		740054B12C00E1CA00BAA474 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		740054BB2C00F3D400BAA474 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		740054BF2C05512100BAA474 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				740054AA2C00E1C700BAA474 /* PomodoroApp.swift */,
+				740054B92C00E3C600BAA474 /* ViewModel */,
 				740054B82C00E1EF00BAA474 /* Views */,
 				740054BA2C00E3E300BAA474 /* Model */,
 				740054AE2C00E1CA00BAA474 /* Assets.xcassets */,
@@ -75,6 +78,7 @@
 			children = (
 				740054AC2C00E1C700BAA474 /* LandingView.swift */,
 				740054BB2C00F3D400BAA474 /* Achievement.swift */,
+				740054BF2C05512100BAA474 /* Journal.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,7 +93,6 @@
 		740054BA2C00E3E300BAA474 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				740054B92C00E3C600BAA474 /* ViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				740054AD2C00E1C700BAA474 /* LandingView.swift in Sources */,
 				740054AB2C00E1C700BAA474 /* PomodoroApp.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
+				740054C02C05512100BAA474 /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
