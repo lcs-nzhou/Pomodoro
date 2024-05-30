@@ -14,6 +14,7 @@
 		740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054BB2C00F3D400BAA474 /* Achievement.swift */; };
 		740054C02C05512100BAA474 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054BF2C05512100BAA474 /* Journal.swift */; };
 		740054C22C08ACF200BAA474 /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C12C08ACF200BAA474 /* Planning.swift */; };
+		740054C42C08B2D200BAA474 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C32C08B2D200BAA474 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		740054BB2C00F3D400BAA474 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		740054BF2C05512100BAA474 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		740054C12C08ACF200BAA474 /* Planning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
+		740054C32C08B2D200BAA474 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				740054BB2C00F3D400BAA474 /* Achievement.swift */,
 				740054BF2C05512100BAA474 /* Journal.swift */,
 				740054C12C08ACF200BAA474 /* Planning.swift */,
+				740054C32C08B2D200BAA474 /* Account.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				740054AB2C00E1C700BAA474 /* PomodoroApp.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
 				740054C02C05512100BAA474 /* Journal.swift in Sources */,
+				740054C42C08B2D200BAA474 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
