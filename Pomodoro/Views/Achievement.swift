@@ -22,10 +22,13 @@ struct Achievement: View {
             ScrollView {
                 LazyVGrid(columns: twoColumns) {
                     ForEach(1..<11) { item in
-                        Image("NewMedal")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding()
+                        NavigationLink(destination: MedalDetailView()){
+                            Image("NewMedal")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding()
+                        }
+                        
                     }
                 }
                 .navigationTitle("Achievements")
@@ -44,7 +47,7 @@ struct Achievement: View {
                 Image(systemName: "alarm.fill")
             }
             .tag(1)
-        Text("Journal")
+        Journal()
             .tabItem {
                 Image(systemName: "book")
             }
@@ -55,7 +58,7 @@ struct Achievement: View {
                 
             }
             .tag(3)
-        Text("Account")
+        Account()
             .tabItem {
                 Image(systemName: "person.fill")
             }

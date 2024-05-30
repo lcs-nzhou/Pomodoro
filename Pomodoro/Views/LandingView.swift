@@ -73,18 +73,18 @@ func stopTimer() {
                 Image(systemName: "alarm.fill")
             }
             .tag(1)
-        Text("Journal")
+        Journal()
             .tabItem {
                 Image(systemName: "book")
             }
             .tag(2)
-        Text("achievement")
+        Achievement()
             .tabItem {
                 Image(systemName: "medal.fill")
                 
             }
             .tag(3)
-        Text("Account")
+        Account()
             .tabItem {
                 Image(systemName: "person.fill")
             }

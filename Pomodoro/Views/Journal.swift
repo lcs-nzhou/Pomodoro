@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Journal: View {
+    @State private var isSearchVisible = false
+    @State private var searchText = ""
     
     struct ColorInfo: Identifiable {
         let id = UUID()
@@ -33,7 +35,18 @@ struct Journal: View {
                     Spacer()
                     Text("May")
                     Spacer()
-                    Image(systemName: "magnifyingglass")
+                    if isSearchVisible {
+                        TextField("Search...", text: $searchText)
+                            .padding()
+                    }
+                    Button(action: {
+                        withAnimation {
+                            isSearchVisible.toggle()
+                        }
+                    }) {
+                        Image(systemName: "magnifyingglass")
+                    }
+
                 }
                 .padding()
                 VStack{
@@ -84,7 +97,7 @@ struct Journal: View {
                 
             }
             .tag(3)
-        Text("Account")
+        Account()
             .tabItem {
                 Image(systemName: "person.fill")
             }
