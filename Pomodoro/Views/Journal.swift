@@ -21,40 +21,48 @@ struct Journal: View {
             ColorInfo(name: "Blue", desc: Color.blue),
             ColorInfo(name: "Purple", desc: Color.purple)
         ]
-        VStack{
-            HStack{
-                Image(systemName: "calendar")
-                Spacer()
-                Text("May")
-                Spacer()
-                Image(systemName: "magnifyingglass")
-            }
-            .padding()
-            VStack{
-                Text("Next study time scheduled")
-                    .background(RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.blue)
-                        .opacity(0.1)
-                               ) }
-            .padding()
-                                
+        NavigationStack{
             VStack{
                 HStack{
-                    Text("May 30 Thu")
-                        .padding(.leading)
+                    NavigationLink{
+                        Planning()
+                    } label: {
+                        Label("", systemImage:"calendar")
+                    }
+                    
                     Spacer()
+                    Text("May")
+                    Spacer()
+                    Image(systemName: "magnifyingglass")
                 }
-                Table(colors) {
-                    TableColumn("Names") { color in
-                        Text(color.name)
+                .padding()
+                VStack{
+                    Text("Next study time scheduled")
+                        .background(RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.blue)
+                            .opacity(0.1)
+                        ) }
+                .padding()
+                
+                VStack{
+                    HStack{
+                        Text("May 30 Thu")
+                            .padding(.leading)
+                        Spacer()
                     }
-                    TableColumn("Colors") { color in
-                        color.desc
+                    Table(colors) {
+                        TableColumn("Names") { color in
+                            Text(color.name)
+                        }
+                        TableColumn("Colors") { color in
+                            color.desc
+                        }
                     }
                 }
+                Spacer()
             }
-            Spacer()
         }
+        
     }
 }
 
