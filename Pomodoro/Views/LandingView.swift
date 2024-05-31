@@ -10,14 +10,22 @@ import SwiftUI
 struct LandingView: View {
     
     @State var newDescription = ""
-    @State var date = Date()
     @State private var timerIsRunning = false
+    @State private var time = 0
+   
     
     var body: some View {
         VStack {
-            DatePicker("", selection: $date, displayedComponents: .hourAndMinute)
-                .datePickerStyle(.wheel)
-                .labelsHidden()
+            HStack {
+                Picker("Name", selection: $time) {
+                    Text("60:00").tag(60)
+                    Text("45:00").tag(45)
+                    Text("30:00").tag(30)
+                    Text("15:00").tag(15)
+                }
+                .pickerStyle(.wheel)
+                Text("Minutes")
+            }
             ZStack {
                 Circle()
                     .foregroundColor(.white)
