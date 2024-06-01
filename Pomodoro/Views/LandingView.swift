@@ -7,25 +7,37 @@
 
 import SwiftUI
 
+class TimerViewModel: ObservableObject {
+    @Published var selectedHoursAmount = 0
+    @Published var selectedMinutesAmount = 45
+
+    let hoursRange = 0...10
+    let minutesRange = 0...59
+   
+}
+
 struct LandingView: View {
     
     @State var newDescription = ""
     @State private var timerIsRunning = false
     @State private var time = 0
    
-    
+    @StateObject private var model = TimerViewModel()
     var body: some View {
+        
         VStack {
-            HStack {
-                Picker("Name", selection: $time) {
-                    Text("60:00").tag(60)
-                    Text("45:00").tag(45)
-                    Text("30:00").tag(30)
-                    Text("15:00").tag(15)
-                }
-                .pickerStyle(.wheel)
-                Text("Minutes")
+            HStack() {
+                TimePickerView(title: "hours",
+                               range: model.hoursRange,
+                               binding: $model.selectedHoursAmount)
+                TimePickerView(title: "min",
+                               range: model.minutesRange,
+                               binding: $model.selectedMinutesAmount)
+               
             }
+            .padding(.all, 32)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+          
             ZStack {
                 Circle()
                     .foregroundColor(.white)

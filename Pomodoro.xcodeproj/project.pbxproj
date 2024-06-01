@@ -16,6 +16,7 @@
 		740054C22C08ACF200BAA474 /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C12C08ACF200BAA474 /* Planning.swift */; };
 		740054C42C08B2D200BAA474 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C32C08B2D200BAA474 /* Account.swift */; };
 		740054C82C08BC1D00BAA474 /* MedalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C72C08BC1D00BAA474 /* MedalDetailView.swift */; };
+		740054CA2C0BBD5300BAA474 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C92C0BBD5300BAA474 /* TimePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		740054C12C08ACF200BAA474 /* Planning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
 		740054C32C08B2D200BAA474 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		740054C72C08BC1D00BAA474 /* MedalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalDetailView.swift; sourceTree = "<group>"; };
+		740054C92C0BBD5300BAA474 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				740054C12C08ACF200BAA474 /* Planning.swift */,
 				740054C32C08B2D200BAA474 /* Account.swift */,
 				740054C72C08BC1D00BAA474 /* MedalDetailView.swift */,
+				740054C92C0BBD5300BAA474 /* TimePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				740054C22C08ACF200BAA474 /* Planning.swift in Sources */,
 				740054AD2C00E1C700BAA474 /* LandingView.swift in Sources */,
+				740054CA2C0BBD5300BAA474 /* TimePickerView.swift in Sources */,
 				740054C82C08BC1D00BAA474 /* MedalDetailView.swift in Sources */,
 				740054AB2C00E1C700BAA474 /* PomodoroApp.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
