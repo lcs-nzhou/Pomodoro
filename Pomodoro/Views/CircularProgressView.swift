@@ -16,14 +16,14 @@ struct CircularProgressView: View {
             Circle()
                 .stroke(lineWidth: 8.0)
                 .opacity(0.3)
-                .foregroundColor(Color("TimerButtonCancel"))
+                .foregroundColor(.gray)
 
              // Orange circle
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: 8.0,
                     lineCap: .round, lineJoin: .round))
-                .foregroundColor(Color("TimerButtonPause"))
+                .foregroundColor(.blue)
                 // Ensures the animation starts from 12 o'clock
                 .rotationEffect(Angle(degrees: 270))
         }
