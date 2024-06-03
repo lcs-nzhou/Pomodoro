@@ -21,7 +21,7 @@ struct Account: View {
 
 #Preview {
     TabView(selection: Binding.constant(4)) {
-        LandingView()
+        StudyTimer()
             .tabItem{
                 Image(systemName: "alarm.fill")
             }

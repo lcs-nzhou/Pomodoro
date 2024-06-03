@@ -42,7 +42,7 @@ struct Achievement: View {
 
 #Preview {
     TabView(selection: Binding.constant(3)) {
-        LandingView()
+        StudyTimer()
             .tabItem{
                 Image(systemName: "alarm.fill")
             }

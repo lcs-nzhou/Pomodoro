@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "6367d2391e92651c2597a46d_612825f61e6a8ca5c0020935_pomodoro-technique.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

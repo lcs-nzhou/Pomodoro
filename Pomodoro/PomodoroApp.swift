@@ -12,7 +12,7 @@ struct PomodoroApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: Binding.constant(1)) {
-                LandingView()
+                StudyTimer()
                     .tabItem{
                         Image(systemName: "alarm.fill")
                     }

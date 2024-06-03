@@ -81,7 +81,7 @@ struct Journal: View {
 
 #Preview {
     TabView(selection: Binding.constant(2)) {
-        LandingView()
+        StudyTimer()
             .tabItem{
                 Image(systemName: "alarm.fill")
             }
