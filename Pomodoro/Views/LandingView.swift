@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LandingView: View {
-    @State private var titleoffset = -350
+    
+    @State private var titleOffset = -350.0
+    
     var body: some View {
     
         NavigationStack {
@@ -16,17 +18,24 @@ struct LandingView: View {
                 Text("Pomodoro")
                     .font(.largeTitle)
                     .bold()
+                    .offset(x: titleOffset)
                 
                 Image("Pomodoro")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
                 NavigationLink{
-                    StudyTimer()
+                    CustomTabView()
                 } label: {
                     Label("Get Started", systemImage:"")
                 }
             }
+        }
+        .task {
+            withAnimation(.bouncy()) {
+                titleOffset = 0.0
+            }
+            
         }
     }
 }

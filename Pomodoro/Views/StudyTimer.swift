@@ -111,6 +111,8 @@ struct StartButtonStyle: ButtonStyle {
             .background(.blue.opacity(0.3))
             .clipShape(Circle())
             .padding(.all, 3)
+            .font(.title)
+            .bold()
             .overlay(
                 Circle()
                     .stroke(.blue
@@ -125,6 +127,7 @@ struct StudyTimer: View {
     @State var newDescription = ""
     @State private var timerIsRunning = false
     @State private var time = 0
+    @State private var favoriteState = 1
     
     @StateObject private var model = TimerViewModel()
     
@@ -208,16 +211,22 @@ struct StudyTimer: View {
                 
                 HStack {
                     Text("Tag:")
+                    Picker("States", selection: $favoriteState) {
+                        Text("California").tag(0)
+                        Text("Utah").tag(1)
+                        Text("Vermont").tag(2)
+                    }
+                    
                     Spacer()
                 }
-                .padding()
+                .padding(.leading)
                 
                 HStack {
                     Text("Description:")
                     TextField("Enter description", text: $newDescription)
                     Spacer()
                 }
-                .padding()
+                .padding(.leading)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

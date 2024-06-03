@@ -19,6 +19,7 @@
 		740054CA2C0BBD5300BAA474 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054C92C0BBD5300BAA474 /* TimePickerView.swift */; };
 		740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */; };
 		740054D22C0E48ED00BAA474 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D12C0E48ED00BAA474 /* LandingView.swift */; };
+		740054D42C0E525100BAA474 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D32C0E525100BAA474 /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		740054C92C0BBD5300BAA474 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		740054D12C0E48ED00BAA474 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		740054D32C0E525100BAA474 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				740054C92C0BBD5300BAA474 /* TimePickerView.swift */,
 				740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */,
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
+				740054D32C0E525100BAA474 /* CustomTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				740054CA2C0BBD5300BAA474 /* TimePickerView.swift in Sources */,
 				740054C82C08BC1D00BAA474 /* MedalDetailView.swift in Sources */,
 				740054AB2C00E1C700BAA474 /* PomodoroApp.swift in Sources */,
+				740054D42C0E525100BAA474 /* CustomTabView.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
 				740054C02C05512100BAA474 /* Journal.swift in Sources */,
 				740054C42C08B2D200BAA474 /* Account.swift in Sources */,
