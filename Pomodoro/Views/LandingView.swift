@@ -15,7 +15,7 @@ struct LandingView: View {
     
         NavigationStack {
             VStack{
-                Text("Pomodoro")
+                Text("PomodoroPro")
                     .font(.largeTitle)
                     .bold()
                     .offset(x: titleOffset)
@@ -23,6 +23,7 @@ struct LandingView: View {
                 Image("Pomodoro")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(maxHeight: 300)
                 
                 NavigationLink{
                     CustomTabView()
