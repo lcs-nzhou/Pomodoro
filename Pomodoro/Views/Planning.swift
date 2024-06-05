@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct Planning: View {
-    @State var date = Date()
+    @State private var selectedDate = Date()
+    @State private var fromTime = Date()
+    @State private var toTime = Date()
+    @State private var tag = ""
+    @State private var description = ""
    
     var body: some View {
         
         VStack(spacing: 30) {
-            DatePicker("", selection: $date, displayedComponents: .date)
+            DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
                 .datePickerStyle(.graphical)
                 .accentColor(.blue)
                 .padding()
@@ -23,12 +27,15 @@ struct Planning: View {
                     .shadow(radius: 1, x: 4, y: 4))
                 .padding(.horizontal)
             Form {
-                DatePicker("From time", selection: $date,
+                DatePicker("From time", selection: $fromTime,
                            displayedComponents: .hourAndMinute)
-                DatePicker("To time", selection: $date,
+                DatePicker("To time", selection: $toTime,
                            displayedComponents: .hourAndMinute)
                 Text("Tag")
-                Text("Description")
+                HStack {
+                    Text("Description")
+                    TextField("", text: $description)
+                }
             }
             Button(action: submit) {
                 Text("Submit")
@@ -44,11 +51,25 @@ struct Planning: View {
         Spacer()
         
     }
+    
+    func submit() {
+        // Print the selected values to the console
+        print("Selected Date: \(selectedDate)")
+        print("From Time: \(fromTime)")
+        print("To time: \(toTime)")
+        print("Tag: \(tag)")
+        print("Description: \(description)")
+        
+        //Optionally reset the form after submission
+        selectedDate = Date()
+        fromTime = Date()
+        toTime = Date()
+        tag = ""
+        description = ""
+    }
 }
 
-func submit() {
-    
-}
+
 
 #Preview {
     Planning()
