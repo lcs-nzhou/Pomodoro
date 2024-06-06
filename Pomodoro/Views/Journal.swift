@@ -10,6 +10,7 @@ import SwiftUI
 struct Journal: View {
     @State private var isSearchVisible = false
     @State private var searchText = ""
+    @State private var viewModel = JournalViewModel()
     
     struct ColorInfo: Identifiable {
         let id = UUID()
