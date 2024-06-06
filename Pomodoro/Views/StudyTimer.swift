@@ -128,6 +128,8 @@ struct StudyTimer: View {
     @State private var timerIsRunning = false
     @State private var time = 0
     @State private var favoriteState = 1
+    @State private var selectedTag = ""
+    @State private var showTagSelection = false
     
     @StateObject private var model = TimerViewModel()
     
@@ -210,12 +212,21 @@ struct StudyTimer: View {
                 timerControls
                 
                 HStack {
-                    Text("Tag:")
-                    Picker("States", selection: $favoriteState) {
-                        Text("California").tag(0)
-                        Text("Utah").tag(1)
-                        Text("Vermont").tag(2)
+                    HStack {
+                        Text("Tag")
+                        Spacer()
+                        Text(selectedTag.isEmpty ? "Select Tag" : selectedTag)
+                            .foregroundColor(.gray)
+                            .onTapGesture {
+                                showTagSelection = true
+                            }
+                            .sheet(isPresented: $showTagSelection) {
+                                TagSelectionView(selectedTag: $selectedTag)
+                            }
                     }
+                    .contentShape(Rectangle())
+                    .padding(.trailing)
+                   
                     
                     Spacer()
                 }

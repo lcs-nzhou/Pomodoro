@@ -19,11 +19,7 @@ struct Journal: View {
     }
     
     var body: some View {
-        @State var colors = [
-            ColorInfo(name: "Red", desc: Color.red),
-            ColorInfo(name: "Blue", desc: Color.blue),
-            ColorInfo(name: "Purple", desc: Color.purple)
-        ]
+        
         NavigationStack{
             VStack{
                 HStack{
@@ -58,20 +54,10 @@ struct Journal: View {
                         ) }
                 .padding()
                 
-                VStack{
-                    HStack{
-                        Text("May 30 Thu")
-                            .padding(.leading)
-                        Spacer()
-                    }
-                    Table(colors) {
-                        TableColumn("Names") { color in
-                            Text(color.name)
-                        }
-                        TableColumn("Colors") { color in
-                            color.desc
-                        }
-                    }
+                
+                List(viewModel.sessions) { session in
+                    Text(session.description)
+                    
                 }
                 Spacer()
             }

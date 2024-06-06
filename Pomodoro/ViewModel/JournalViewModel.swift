@@ -37,8 +37,12 @@ struct Session: Identifiable, Codable {
 @Observable
 class JournalViewModel {
     
+    // MARK: Stored properties
+    // The list of sessions in the past (eventually – right now shows all sessions)
+    var sessions: [Session]
     
     init() {
+        self.sessions = []
         Task {
             try await getSessions()
         }
@@ -54,6 +58,9 @@ class JournalViewModel {
             
             dump(results)
             print("Debugging!")
+            
+            self.sessions = results
+            
         } catch {
             debugPrint(error)
         }
