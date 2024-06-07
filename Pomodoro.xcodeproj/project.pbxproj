@@ -29,6 +29,7 @@
 		740054E42C11E95800BAA474 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 740054E32C11E95800BAA474 /* Storage */; };
 		740054E62C11E95800BAA474 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 740054E52C11E95800BAA474 /* Supabase */; };
 		740054E82C11E9A100BAA474 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E72C11E9A100BAA474 /* Supabase.swift */; };
+		740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E92C135C5700BAA474 /* OpeningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		740054D52C11E45400BAA474 /* TagSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectView.swift; sourceTree = "<group>"; };
 		740054D72C11E78100BAA474 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		740054E72C11E9A100BAA474 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		740054E92C135C5700BAA474 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
 				740054D32C0E525100BAA474 /* CustomTabView.swift */,
 				740054D52C11E45400BAA474 /* TagSelectView.swift */,
+				740054E92C135C5700BAA474 /* OpeningView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				740054C22C08ACF200BAA474 /* Planning.swift in Sources */,
 				740054D62C11E45400BAA474 /* TagSelectView.swift in Sources */,
 				740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */,
+				740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */,
 				740054AD2C00E1C700BAA474 /* StudyTimer.swift in Sources */,
 				740054D22C0E48ED00BAA474 /* LandingView.swift in Sources */,
 				740054CA2C0BBD5300BAA474 /* TimePickerView.swift in Sources */,

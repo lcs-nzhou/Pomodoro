@@ -10,6 +10,7 @@ import SwiftUI
 struct LandingView: View {
     
     @State private var titleOffset = -350.0
+    @Binding var getStarted: Bool
     
     var body: some View {
     
@@ -25,11 +26,13 @@ struct LandingView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(maxHeight: 300)
                 
-                NavigationLink{
-                    CustomTabView()
-                } label: {
-                    Label("Get Started", systemImage:"")
-                }
+                Text("Get Started")
+                    .bold()
+                    .font(.title)
+                    .foregroundStyle(.gray)
+                    .onTapGesture {
+                        getStarted = true
+                    }
             }
         }
         .task {
@@ -42,5 +45,5 @@ struct LandingView: View {
 }
 
 #Preview {
-    LandingView()
+    LandingView(getStarted: .constant(false))
 }

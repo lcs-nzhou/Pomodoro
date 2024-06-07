@@ -57,7 +57,6 @@ struct Journal: View {
                 
                 List(viewModel.sessions) { session in
                     Text(session.description)
-                    
                 }
                 Spacer()
             }
