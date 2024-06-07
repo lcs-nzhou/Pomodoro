@@ -65,6 +65,35 @@ class JournalViewModel {
             debugPrint(error)
         }
     }
-    
+    func filterSessions(on searchTerm: String) async throws {
+
+        if searchTerm.isEmpty {
+
+            // Get all the sessions
+            Task {
+                try await getSessions()
+            }
+
+        } else {
+
+            // Get a filtered list of to-dos
+            do {
+                let results: [Session] = try await supabase
+                    .from("todos")
+                    .select()
+                    .ilike("session", pattern: "%\(searchTerm)%")
+                    .order("id", ascending: true)
+                    .execute()
+                    .value
+
+                self.sessions = results
+
+            } catch {
+                debugPrint(error)
+            }
+
+        }
+
+    }
    
 }

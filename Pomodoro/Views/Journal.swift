@@ -11,6 +11,7 @@ struct Journal: View {
     @State private var isSearchVisible = false
     @State private var searchText = ""
     @State private var viewModel = JournalViewModel()
+    @State private var date = Date()
     
     struct ColorInfo: Identifiable {
         let id = UUID()
@@ -30,7 +31,10 @@ struct Journal: View {
                     }
                     
                     Spacer()
-                    Text("May")
+                    DatePicker("Today", selection: $date, displayedComponents: .date)
+                        .labelsHidden()
+                        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            .fill(Color.white))
                     Spacer()
                     if isSearchVisible {
                         TextField("Search...", text: $searchText)
@@ -56,10 +60,21 @@ struct Journal: View {
                 
                 
                 List(viewModel.sessions) { session in
-                    Text(session.description)
+                    VStack(alignment: .leading){
+                        Text(session.description)
+                        HStack{
+                            Text(session.date)
+                                .foregroundStyle(.gray)
+                            Text("Tag")
+                                .foregroundStyle(.gray)
+                        }
+                       
+                    }
+                    
                 }
                 Spacer()
             }
+            
         }
         
     }

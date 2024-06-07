@@ -112,16 +112,16 @@
 			isa = PBXGroup;
 			children = (
 				740054AC2C00E1C700BAA474 /* StudyTimer.swift */,
-				740054BB2C00F3D400BAA474 /* Achievement.swift */,
-				740054BF2C05512100BAA474 /* Journal.swift */,
-				740054C12C08ACF200BAA474 /* Planning.swift */,
-				740054C32C08B2D200BAA474 /* Account.swift */,
-				740054C72C08BC1D00BAA474 /* MedalDetailView.swift */,
 				740054C92C0BBD5300BAA474 /* TimePickerView.swift */,
 				740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */,
+				740054BF2C05512100BAA474 /* Journal.swift */,
+				740054C12C08ACF200BAA474 /* Planning.swift */,
+				740054D52C11E45400BAA474 /* TagSelectView.swift */,
+				740054BB2C00F3D400BAA474 /* Achievement.swift */,
+				740054C72C08BC1D00BAA474 /* MedalDetailView.swift */,
+				740054C32C08B2D200BAA474 /* Account.swift */,
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
 				740054D32C0E525100BAA474 /* CustomTabView.swift */,
-				740054D52C11E45400BAA474 /* TagSelectView.swift */,
 				740054E92C135C5700BAA474 /* OpeningView.swift */,
 			);
 			path = Views;
