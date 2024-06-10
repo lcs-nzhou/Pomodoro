@@ -13,6 +13,13 @@ struct Journal: View {
     @State private var viewModel = JournalViewModel()
     @State private var date = Date()
     
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        return formatter
+    }
+    @State private var selectedTag = ""
+    
     struct ColorInfo: Identifiable {
         let id = UUID()
         var name = ""
@@ -31,9 +38,9 @@ struct Journal: View {
                     }
                     
                     Spacer()
-                    DatePicker("Today", selection: $date, displayedComponents: .date)
-                        .labelsHidden()
-                        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    Text("\(date, formatter: dateFormatter)")
+                        .padding()
+                       .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .fill(Color.white))
                     Spacer()
                     if isSearchVisible {
