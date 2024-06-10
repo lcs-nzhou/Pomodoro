@@ -70,7 +70,7 @@ struct Journal: View {
                     VStack(alignment: .leading){
                         Text(session.description)
                         HStack{
-                            Text(session.date)
+                            Text(session.date.formatted())
                                 .foregroundStyle(.gray)
                             Text(session.tag.name)
                                 .foregroundStyle(.gray)

@@ -14,6 +14,7 @@ struct Planning: View {
     @State private var selectedTag = ""
     @State private var description = ""
     @State private var showTagSelection = false
+    @Environment(JournalViewModel.self) var viewModel
     
     var body: some View {
         NavigationView {
@@ -53,22 +54,40 @@ struct Planning: View {
                     
                     TextField("Description", text: $description)
                 }
-                
-                Button(action: submit) {
-                    Text("Submit")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                Button("Submit"){
+                    viewModel.createSessions(withTitle: description)
                 }
+                .font(.title)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+//                Button(action: submit) {
+//                    Text("Submit")
+//                        .font(.title)
+//                        .padding()
+//                        .background(Color.blue)
+//                        .foregroundColor(.white)
+//                        .cornerRadius(10)
+//                }
             }
             .padding()
             
             Spacer()
         }
     }
-    
+//    HStack {
+//        TextField("Enter a to-do item", text: $newItemDescription)
+//        
+//        Button("ADD") {
+//            // Add the new to-do item
+//            viewModel.createToDo(withTitle: newItemDescription)
+//            // Clear the input field
+//            newItemDescription = ""
+//        }
+//        .font(.caption)
+//        .disabled(newItemDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true)
+//    }
     func submit() {
         // Print the selected values to the console
         print("Selected Date: \(selectedDate)")
@@ -90,4 +109,5 @@ struct Planning: View {
 
 #Preview {
     Planning()
+        .environment(JournalViewModel())
 }
