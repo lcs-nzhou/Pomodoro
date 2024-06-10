@@ -72,7 +72,7 @@ struct Journal: View {
                         HStack{
                             Text(session.date)
                                 .foregroundStyle(.gray)
-                            Text("Tag")
+                            Text(session.tag.name)
                                 .foregroundStyle(.gray)
                         }
                        
