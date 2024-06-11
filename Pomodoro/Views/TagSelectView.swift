@@ -12,22 +12,12 @@ struct TagSelectionView: View {
     let tags = ["Work", "Personal", "Exercise", "Shopping", "Other"]
     
     var body: some View {
-        List {
-            ForEach(tags, id: \.self) { tag in
-                HStack {
-                    Text(tag)
-                    Spacer()
-                    if tag == selectedTag {
-                        Image(systemName: "checkmark")
-                            .foregroundColor(.blue)
-                    }
-                }
-                .contentShape(Rectangle())
+        List(tags, id: \.self) { tag in
+            Text(tag)
                 .onTapGesture {
                     selectedTag = tag
+                    // Dismiss the sheet
                 }
-            }
         }
-        .navigationTitle("Select Tag")
     }
 }

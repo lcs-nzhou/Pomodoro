@@ -12,6 +12,7 @@ struct PomodoroApp: App {
     var body: some Scene {
         WindowGroup {
             OpeningView()
+                
         }
     }
 }
