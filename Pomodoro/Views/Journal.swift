@@ -87,7 +87,7 @@ struct Journal: View {
             }
             
         }
-        
+        .environment(JournalViewModel())
     }
 }
 
