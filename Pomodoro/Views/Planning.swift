@@ -55,7 +55,7 @@ struct Planning: View {
                     TextField("Description", text: $description)
                 }
                 Button("Submit"){
-                    viewModel.createSessions(date: selectedDate, description: description, status: false, startTime: fromTime, endTime: toTime, TagId: 1)
+                    viewModel.createSessions(date: selectedDate, description: description, status: false, startTime: fromTime, endTime: toTime, tagId: 1)
                 }
                 .font(.title)
                 .padding()

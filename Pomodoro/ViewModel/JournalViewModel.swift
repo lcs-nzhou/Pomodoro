@@ -115,29 +115,15 @@ class JournalViewModel {
 
     }
 
-    func createSessions(date: Date, description: String, status: Bool, startTime: Date,endTime: Date, TagId: Int) {
+    func createSessions(date: Date, description: String, status: Bool, startTime: Date,endTime: Date, tagId: Int) {
         
         // Create a unit of asynchronous work to add the to-do item
         Task {
             
             // Create the new session item instance
             // NOTE: The id will be nil for now
-            let session = NewSession(date: Date(), description: description, status: false, startTime: Date(), endTime: Date(), tagId: 1)
-            
-            // Convert date fields to String
-            let dateString = session.date.toString()
-            let startTimeString = session.startTime.toString()
-            let endTimeString = session.endTime.toString()
-            
-            // Create the dictionary to be inserted
-            let _: [String: Any] = [
-                "date": dateString,
-                "description": session.description,  // Ensure description is a String
-                "status": session.status,  // Ensure status is a Bool
-                "startTime": startTimeString,
-                "endTime": endTimeString,
-                "tagId": session.tagId  // Ensure tagId is an Int
-            ]
+            let session = NewSession(date: date, description: description, status: false, startTime: startTime, endTime: endTime, tagId: tagId)
+        
             
             // Write it to the database
             do {
@@ -167,10 +153,4 @@ class JournalViewModel {
     }
    
 }
-extension Date {
-    func toString(format: String = "yyyy-MM-dd'T'HH:mm:ssZ") -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: self)
-    }
-}
+
