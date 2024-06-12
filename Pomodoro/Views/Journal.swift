@@ -65,20 +65,24 @@ struct Journal: View {
                         ) }
                 .padding()
                 
-                
-                List(viewModel.sessions) { session in
-                    VStack(alignment: .leading){
-                        Text(session.description)
-                        HStack{
-                            Text(session.date.formatted())
-                                .foregroundStyle(.gray)
-                            Text(session.tag.name)
-                                .foregroundStyle(.gray)
-                        }
-                       
-                    }
+                List($viewModel.sessions) { $session in
+                    
+                    ItemView(currentItem: $session)
                     
                 }
+//                List(viewModel.sessions) { session in
+//                    VStack(alignment: .leading){
+//                        Text(session.description)
+//                        HStack{
+//                            Text(session.date.formatted())
+//                                .foregroundStyle(.gray)
+//                            Text(session.tag.name)
+//                                .foregroundStyle(.gray)
+//                        }
+//                       
+//                    }
+//                    
+//                }
                 Spacer()
             }
             

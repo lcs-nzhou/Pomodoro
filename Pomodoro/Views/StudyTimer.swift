@@ -121,6 +121,28 @@ struct StartButtonStyle: ButtonStyle {
     }
 }
 
+struct CancelButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+            .background(.blue, in: Capsule())
+            .foregroundColor(.white)
+            .cornerRadius(5)
+            .padding(.top)
+    }
+}
+
+struct PauseButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+            .background(.cyan.opacity(0.3), in: Capsule())
+            .foregroundColor(.cyan)
+            .cornerRadius(5)
+            .padding(.top)
+    }
+}
+
 
 struct StudyTimer: View {
     
@@ -145,23 +167,19 @@ struct StudyTimer: View {
                 Button("Resume") {
                     model.state = .resumed
                 }
-             //   .buttonStyle(StartButtonStyle())
+                .buttonStyle(PauseButtonStyle())
             case .active, .resumed:
                 Button("Pause") {
                     model.state = .paused
                 }
-             //   .buttonStyle(StartButtonStyle())
+               .buttonStyle(PauseButtonStyle())
             }
                 
             
             Button("Cancel") {
                 model.state = .cancelled
             }
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(5)
-            .padding()
-            // .buttonStyle(StartButtonStyle())
+            .buttonStyle(CancelButtonStyle())
             
         }
         .padding(.all, 32)
@@ -243,31 +261,6 @@ struct StudyTimer: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         
-        
-        /* ZStack {
-         Circle()
-         .foregroundColor(.white)
-         .frame(maxWidth: 350)
-         if !timerIsRunning {
-         Button(action: startTimer) {
-         Text("Start Timer")
-         .font(.title)
-         .padding()
-         .background(Color.blue)
-         .foregroundColor(.white)
-         .cornerRadius(10)
-         }
-         } else {
-         Button(action: stopTimer) {
-         Text("Stop Timer")
-         .font(.title)
-         .padding()
-         .background(Color.red)
-         .foregroundColor(.white)
-         .cornerRadius(10)
-         }
-         }
-         }*/
         
         
     }
