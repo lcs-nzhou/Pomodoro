@@ -86,6 +86,13 @@ struct Journal: View {
                         .padding()
                 }
                 
+                HStack {
+                    Text("Past Sessions")
+                        .bold()
+                        .font(.title)
+                        .padding(.leading)
+                    Spacer()
+                }
                 
                 List(viewModel.sessions.filter{$0.date <= Date() }) { session in
                     VStack(alignment: .leading){
@@ -100,6 +107,7 @@ struct Journal: View {
                     }
                     
                 }
+                .listStyle(.plain)
                 Spacer()
             }
             
