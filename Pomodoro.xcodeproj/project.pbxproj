@@ -30,7 +30,6 @@
 		740054E62C11E95800BAA474 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 740054E52C11E95800BAA474 /* Supabase */; };
 		740054E82C11E9A100BAA474 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E72C11E9A100BAA474 /* Supabase.swift */; };
 		740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E92C135C5700BAA474 /* OpeningView.swift */; };
-		7478712A2C18F93A00289BD7 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747871292C18F93A00289BD7 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		740054D72C11E78100BAA474 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		740054E72C11E9A100BAA474 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		740054E92C135C5700BAA474 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
-		747871292C18F93A00289BD7 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +123,6 @@
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
 				740054D32C0E525100BAA474 /* CustomTabView.swift */,
 				740054E92C135C5700BAA474 /* OpeningView.swift */,
-				747871292C18F93A00289BD7 /* ItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,7 +234,6 @@
 				740054D82C11E78100BAA474 /* JournalViewModel.swift in Sources */,
 				740054E82C11E9A100BAA474 /* Supabase.swift in Sources */,
 				740054C22C08ACF200BAA474 /* Planning.swift in Sources */,
-				7478712A2C18F93A00289BD7 /* ItemView.swift in Sources */,
 				740054D62C11E45400BAA474 /* TagSelectView.swift in Sources */,
 				740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */,
 				740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */,

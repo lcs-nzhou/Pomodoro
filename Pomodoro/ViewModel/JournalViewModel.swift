@@ -98,7 +98,7 @@ class JournalViewModel {
             // Get a filtered list of to-dos
             do {
                 let results: [Session] = try await supabase
-                    .from("todos")
+                    .from("session")
                     .select()
                     .ilike("session", pattern: "%\(searchTerm)%")
                     .order("id", ascending: true)

@@ -69,7 +69,7 @@ struct Journal: View {
                     VStack(alignment: .leading){
                         Text(session.description)
                         HStack{
-                            Text(session.date.formatted(date: .long, time: .standard))
+                            Text("\(session.date.formatted(date: .long, time: .standard))")
                                 .foregroundStyle(.gray)
                             Text(session.tag.name)
                                 .foregroundStyle(.gray)
