@@ -65,7 +65,7 @@ struct Journal: View {
                         ) }
                 .padding()
                 
-                List(viewModel.sessions) { session in
+                List(viewModel.sessions.filter{$0.date <= Date() }) { session in
                     VStack(alignment: .leading){
                         Text(session.description)
                         HStack{
