@@ -36,7 +36,8 @@ struct Planning: View {
                 
                 Form {
                     DatePicker("From Time", selection: $fromTime, displayedComponents: .hourAndMinute)
-                    Stepper("forHowLong", value: $forHowLong)
+                    
+                    Text("For 45 minutes")
                     
                     HStack {
                         Text("Tag")
@@ -55,7 +56,7 @@ struct Planning: View {
                     TextField("Description", text: $description)
                 }
                 Button("Submit"){
-                    viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: 1, duration: forHowLong)
+                    viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: 1, duration: 45)
                     description = ""
                 }
                 .font(.title)
