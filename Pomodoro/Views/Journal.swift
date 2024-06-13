@@ -28,6 +28,13 @@ struct Journal: View {
     
     var body: some View {
         
+        var nearestFutureSession: Session? {
+                viewModel.sessions
+                    .filter { $0.date > Date() }
+                    .sorted { $0.date < $1.date }
+                    .first
+            }
+        
         NavigationStack{
             VStack{
                 HStack{
@@ -57,13 +64,28 @@ struct Journal: View {
 
                 }
                 .padding()
-                VStack{
-                    Text("Next study time scheduled")
-                        .background(RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.blue)
-                            .opacity(0.1)
-                        ) }
-                .padding()
+               
+                if let session = nearestFutureSession {
+                    VStack(alignment: .leading) {
+                        Text("Next Session:")
+                            .font(.headline)
+                        Text(session.description)
+                        HStack {
+                            Text(session.date, style: .date)
+                                .foregroundColor(.gray)
+                            Text(session.tag.name)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue.opacity(0.1)))
+                    .padding()
+                } else {
+                    Text("No upcoming sessions")
+                        .foregroundColor(.gray)
+                        .padding()
+                }
+                
                 
                 List(viewModel.sessions.filter{$0.date <= Date() }) { session in
                     VStack(alignment: .leading){
