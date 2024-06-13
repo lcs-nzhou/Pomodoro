@@ -56,6 +56,7 @@ struct Planning: View {
                 }
                 Button("Submit"){
                     viewModel.createSessions(date: selectedDate, description: description, status: false, startTime: fromTime, endTime: toTime, tagId: 1)
+                    description = ""
                 }
                 .font(.title)
                 .padding()
