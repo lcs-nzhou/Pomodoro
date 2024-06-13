@@ -13,6 +13,9 @@ struct Journal: View {
     @State private var viewModel = JournalViewModel()
     @State private var date = Date()
     
+    //Is the sheet to add a new item showing right now?
+    @State var presentingNewItemSheet = false
+    
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
@@ -38,10 +41,15 @@ struct Journal: View {
         NavigationStack{
             VStack{
                 HStack{
-                    NavigationLink{
-                        Planning()
+//                    NavigationLink{
+//                        Planning()
+//                    } label: {
+//                        Label("", systemImage:"calendar")
+//                    }
+                    Button {
+                        presentingNewItemSheet = true
                     } label: {
-                        Label("", systemImage:"calendar")
+                        Image(systemName: "calendar")
                     }
                     
                     Spacer()
@@ -110,7 +118,10 @@ struct Journal: View {
                 .listStyle(.plain)
                 Spacer()
             }
-            
+            //Show the sheet to add a new item
+            .sheet(isPresented: $presentingNewItemSheet) {
+                Planning(showSheet: $presentingNewItemSheet)
+            }
         }
         .environment(JournalViewModel())
     }

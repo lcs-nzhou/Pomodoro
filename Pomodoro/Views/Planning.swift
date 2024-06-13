@@ -14,6 +14,9 @@ struct Planning: View {
     @State private var selectedTag = ""
     @State private var description = ""
     @State private var showTagSelection = false
+    // Binding to control whether this view is visible
+    @Binding var showSheet: Bool
+    
     @Environment(JournalViewModel.self) var viewModel
     
     private func setDateComponents(_ time: Date, with date: Date) -> Date {
@@ -92,6 +95,6 @@ struct Planning: View {
 
 
 #Preview {
-    Planning()
+    Planning(showSheet: .constant(true) )
         .environment(JournalViewModel())
 }
