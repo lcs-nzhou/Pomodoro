@@ -71,7 +71,7 @@ struct Journal: View {
                             .font(.headline)
                         Text(session.description)
                         HStack {
-                            Text(session.date, style: .date)
+                            Text("\(session.startTime.formatted(date: .abbreviated, time: .shortened))")
                                 .foregroundColor(.gray)
                             Text(session.tag.name)
                                 .foregroundColor(.gray)
@@ -91,7 +91,7 @@ struct Journal: View {
                     VStack(alignment: .leading){
                         Text(session.description)
                         HStack{
-                            Text("\(session.date.formatted(date: .long, time: .standard))")
+                            Text("\(session.startTime.formatted(date: .abbreviated, time: .shortened))")
                                 .foregroundStyle(.gray)
                             Text(session.tag.name)
                                 .foregroundStyle(.gray)

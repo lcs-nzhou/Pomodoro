@@ -16,6 +16,18 @@ struct Planning: View {
     @State private var showTagSelection = false
     @Environment(JournalViewModel.self) var viewModel
     
+    private func setDateComponents(_ time: Date, with date: Date) -> Date {
+           var calendar = Calendar.current
+           calendar.timeZone = TimeZone.current
+           
+           let timeComponents = calendar.dateComponents([.hour, .minute], from: time)
+           var dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
+           dateComponents.hour = timeComponents.hour
+           dateComponents.minute = timeComponents.minute
+           
+           return calendar.date(from: dateComponents) ?? Date()
+       }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
@@ -36,7 +48,9 @@ struct Planning: View {
                 
                 Form {
                     DatePicker("From Time", selection: $fromTime, displayedComponents: .hourAndMinute)
-                    
+                        .onChange(of: selectedDate) { newDate in
+                            fromTime = setDateComponents(fromTime, with: newDate)
+                        }
                     Text("For 45 minutes")
                     
                     HStack {
