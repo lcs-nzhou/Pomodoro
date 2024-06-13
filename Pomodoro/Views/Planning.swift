@@ -10,7 +10,7 @@ import SwiftUI
 struct Planning: View {
     @State private var selectedDate = Date()
     @State private var fromTime = Date()
-    @State private var toTime = Date()
+    @State private var forHowLong = Int()
     @State private var selectedTag = ""
     @State private var description = ""
     @State private var showTagSelection = false
@@ -36,7 +36,7 @@ struct Planning: View {
                 
                 Form {
                     DatePicker("From Time", selection: $fromTime, displayedComponents: .hourAndMinute)
-                    DatePicker("To Time", selection: $toTime, displayedComponents: .hourAndMinute)
+                    Stepper("forHowLong", value: $forHowLong)
                     
                     HStack {
                         Text("Tag")
@@ -55,7 +55,7 @@ struct Planning: View {
                     TextField("Description", text: $description)
                 }
                 Button("Submit"){
-                    viewModel.createSessions(date: selectedDate, description: description, status: false, startTime: fromTime, endTime: toTime, tagId: 1)
+                    viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: 1, duration: forHowLong)
                     description = ""
                 }
                 .font(.title)
@@ -63,47 +63,15 @@ struct Planning: View {
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-//                Button(action: submit) {
-//                    Text("Submit")
-//                        .font(.title)
-//                        .padding()
-//                        .background(Color.blue)
-//                        .foregroundColor(.white)
-//                        .cornerRadius(10)
-//                }
+
             }
             .padding()
             
             Spacer()
         }
     }
-//    HStack {
-//        TextField("Enter a to-do item", text: $newItemDescription)
-//        
-//        Button("ADD") {
-//            // Add the new to-do item
-//            viewModel.createToDo(withTitle: newItemDescription)
-//            // Clear the input field
-//            newItemDescription = ""
-//        }
-//        .font(.caption)
-//        .disabled(newItemDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true)
-//    }
-    func submit() {
-        // Print the selected values to the console
-        print("Selected Date: \(selectedDate)")
-        print("From Time: \(fromTime)")
-        print("To Time: \(toTime)")
-        print("Tag: \(selectedTag)")
-        print("Description: \(description)")
-        
-        // Optionally reset the form after submission
-        selectedDate = Date()
-        fromTime = Date()
-        toTime = Date()
-        selectedTag = ""
-        description = ""
-    }
+
+   
 }
 
 

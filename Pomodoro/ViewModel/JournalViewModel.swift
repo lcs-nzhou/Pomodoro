@@ -11,18 +11,16 @@ struct Session: Identifiable, Codable {
     var id: Int?
     var date: Date
     var description: String
-    var status: Bool
     var startTime: Date
-    var endTime: Date
+    var duration: Int
     var tag: Tag
     
     enum CodingKeys: String, CodingKey {
         case id
         case date
         case description
-        case status
+        case duration
         case startTime = "start_time"
-        case endTime = "end_time"
         case tag
     }
     
@@ -36,18 +34,16 @@ struct NewSession: Identifiable, Codable {
     var id: Int?
     var date: Date
     var description: String
-    var status: Bool
     var startTime: Date
-    var endTime: Date
+    var duration: Int
     var tagId: Int
     
     enum CodingKeys: String, CodingKey {
         case id
         case date
         case description
-        case status
         case startTime = "start_time"
-        case endTime = "end_time"
+        case duration
         case tagId = "tag_id"
     }
 }
@@ -70,7 +66,7 @@ class JournalViewModel {
         do {
             let results: [Session] = try await supabase
                 .from("session")
-                .select("id, date, description, status, start_time, end_time, tag(id, name)")
+                .select("id, date, description, start_time, tag(id, name), duration")
                 .execute()
                 .value
             
@@ -115,14 +111,14 @@ class JournalViewModel {
 
     }
 
-    func createSessions(date: Date, description: String, status: Bool, startTime: Date,endTime: Date, tagId: Int) {
+    func createSessions(date: Date, description: String, startTime: Date, tagId: Int, duration: Int) {
         
         // Create a unit of asynchronous work to add the to-do item
         Task {
             
             // Create the new session item instance
             // NOTE: The id will be nil for now
-            let session = NewSession(date: date, description: description, status: false, startTime: startTime, endTime: endTime, tagId: tagId)
+            let session = NewSession(date: date, description: description, startTime: startTime, duration: duration, tagId: tagId)
         
             
             // Write it to the database
