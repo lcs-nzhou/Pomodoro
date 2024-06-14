@@ -150,7 +150,6 @@ struct StudyTimer: View {
     @State private var timerIsRunning = false
     @State private var time = 0
     @State private var favoriteState = 1
-    @State private var selectedTag = ""
     @State private var showTagSelection = false
     
     @StateObject private var model = TimerViewModel()
@@ -219,47 +218,21 @@ struct StudyTimer: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack {
-                if model.state == .cancelled {
-                    timePickerControl
-                } else {
-                    progressView
-                }
-                
-                timerControls
-                
-                HStack {
-                    HStack {
-                        Text("Tag")
-                        Spacer()
-                        Text(selectedTag.isEmpty ? "Select Tag" : selectedTag)
-                            .foregroundColor(.gray)
-                            .onTapGesture {
-                                showTagSelection = true
-                            }
-                            .sheet(isPresented: $showTagSelection) {
-                                TagSelectionView(selectedTag: $selectedTag)
-                            }
-                    }
-                    .contentShape(Rectangle())
-                    .padding(.trailing)
-                   
-                    
-                    Spacer()
-                }
-                .padding(.leading)
-                
-                HStack {
-                    Text("Description:")
-                    TextField("Enter description", text: $newDescription)
-                    Spacer()
-                }
-                .padding(.leading)
-                Spacer()
+        
+        VStack {
+            if model.state == .cancelled {
+                timePickerControl
+            } else {
+                progressView
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            timerControls
+            
+            
+            Spacer()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
         
         
         
