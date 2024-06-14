@@ -11,7 +11,7 @@ struct Planning: View {
     @State private var selectedDate = Date()
     @State private var fromTime = Date()
     @State private var forHowLong = Int()
-    @State private var selectedTag = Int()
+    @State private var selectedTag = 1
     @State private var description = ""
     @State private var showTagSelection = false
     // Binding to control whether this view is visible
@@ -63,9 +63,6 @@ struct Planning: View {
                     Picker("Tag", selection: $selectedTag) {
                         ForEach(planningViewModel.availableSubjects) {
                             subject in
-                            let _ = print("Hi Nina! I'm iterating... 😆")
-                            let _ = print("My subject is: \(subject.name)")
-                            let _ = print("My id is: \(subject.id)")
                             Text(subject.name).tag(subject.id!)
                         }
                     }
@@ -76,6 +73,10 @@ struct Planning: View {
                 Button("Submit"){
                     viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: selectedTag, duration: 45)
                     description = ""
+                    selectedTag = 1
+                    fromTime = Date()
+                    selectedDate = Date()
+                    
                 }
                 .font(.title)
                 .padding()

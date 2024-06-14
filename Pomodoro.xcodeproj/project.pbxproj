@@ -20,7 +20,6 @@
 		740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */; };
 		740054D22C0E48ED00BAA474 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D12C0E48ED00BAA474 /* LandingView.swift */; };
 		740054D42C0E525100BAA474 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D32C0E525100BAA474 /* CustomTabView.swift */; };
-		740054D62C11E45400BAA474 /* TagSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D52C11E45400BAA474 /* TagSelectView.swift */; };
 		740054D82C11E78100BAA474 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054D72C11E78100BAA474 /* JournalViewModel.swift */; };
 		740054DC2C11E95800BAA474 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 740054DB2C11E95800BAA474 /* Auth */; };
 		740054DE2C11E95800BAA474 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 740054DD2C11E95800BAA474 /* Functions */; };
@@ -31,6 +30,7 @@
 		740054E82C11E9A100BAA474 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E72C11E9A100BAA474 /* Supabase.swift */; };
 		740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E92C135C5700BAA474 /* OpeningView.swift */; };
 		747213B82C1C755900CD9BA3 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */; };
+		747213C02C1CAA1200CD9BA3 /* TagSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,11 +48,11 @@
 		740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		740054D12C0E48ED00BAA474 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		740054D32C0E525100BAA474 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
-		740054D52C11E45400BAA474 /* TagSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectView.swift; sourceTree = "<group>"; };
 		740054D72C11E78100BAA474 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		740054E72C11E9A100BAA474 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		740054E92C135C5700BAA474 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
 		747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
+		747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,13 +118,13 @@
 				740054CB2C0BC0C200BAA474 /* CircularProgressView.swift */,
 				740054BF2C05512100BAA474 /* Journal.swift */,
 				740054C12C08ACF200BAA474 /* Planning.swift */,
-				740054D52C11E45400BAA474 /* TagSelectView.swift */,
 				740054BB2C00F3D400BAA474 /* Achievement.swift */,
 				740054C72C08BC1D00BAA474 /* MedalDetailView.swift */,
 				740054C32C08B2D200BAA474 /* Account.swift */,
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
 				740054D32C0E525100BAA474 /* CustomTabView.swift */,
 				740054E92C135C5700BAA474 /* OpeningView.swift */,
+				747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,7 +237,6 @@
 				740054D82C11E78100BAA474 /* JournalViewModel.swift in Sources */,
 				740054E82C11E9A100BAA474 /* Supabase.swift in Sources */,
 				740054C22C08ACF200BAA474 /* Planning.swift in Sources */,
-				740054D62C11E45400BAA474 /* TagSelectView.swift in Sources */,
 				740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */,
 				747213B82C1C755900CD9BA3 /* PlanningViewModel.swift in Sources */,
 				740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */,
@@ -249,6 +248,7 @@
 				740054D42C0E525100BAA474 /* CustomTabView.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
 				740054C02C05512100BAA474 /* Journal.swift in Sources */,
+				747213C02C1CAA1200CD9BA3 /* TagSelectionView.swift in Sources */,
 				740054C42C08B2D200BAA474 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
