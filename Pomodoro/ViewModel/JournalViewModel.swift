@@ -30,6 +30,11 @@ struct Session: Identifiable, Codable {
     }
 }
 
+struct Tag: Identifiable, Codable {
+    var id: Int?
+    var name: String
+}
+
 struct NewSession: Identifiable, Codable {
     var id: Int?
     var date: Date
@@ -148,5 +153,6 @@ class JournalViewModel {
         }
     }
    
+    
 }
 

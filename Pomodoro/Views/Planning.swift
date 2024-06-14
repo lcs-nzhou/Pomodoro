@@ -11,7 +11,7 @@ struct Planning: View {
     @State private var selectedDate = Date()
     @State private var fromTime = Date()
     @State private var forHowLong = Int()
-    @State private var selectedTag = ""
+    @State private var selectedTag = Int()
     @State private var description = ""
     @State private var showTagSelection = false
     // Binding to control whether this view is visible
@@ -19,6 +19,9 @@ struct Planning: View {
     
     @Environment(JournalViewModel.self) var viewModel
     
+    @State private var planningViewModel = PlanningViewModel()
+    
+    //bind two date pickers
     private func setDateComponents(_ time: Date, with date: Date) -> Date {
            var calendar = Calendar.current
            calendar.timeZone = TimeZone.current
@@ -50,30 +53,28 @@ struct Planning: View {
                 .padding(.horizontal)
                 
                 Form {
+                    
                     DatePicker("From Time", selection: $fromTime, displayedComponents: .hourAndMinute)
-                        .onChange(of: selectedDate) { newDate in
-                            fromTime = setDateComponents(fromTime, with: newDate)
+                        .onChange(of: selectedDate) {
+                            fromTime = setDateComponents(fromTime, with: selectedDate)
                         }
                     Text("For 45 minutes")
                     
-                    HStack {
-                        Text("Tag")
-                        Spacer()
-                        Text(selectedTag.isEmpty ? "Select Tag" : selectedTag)
-                            .foregroundColor(.gray)
+                    Picker("Tag", selection: $selectedTag) {
+                        ForEach(planningViewModel.availableSubjects) {
+                            subject in
+                            let _ = print("Hi Nina! I'm iterating... 😆")
+                            let _ = print("My subject is: \(subject.name)")
+                            let _ = print("My id is: \(subject.id)")
+                            Text(subject.name).tag(subject.id!)
+                        }
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        showTagSelection = true
-                    }
-                    .sheet(isPresented: $showTagSelection) {
-                        TagSelectionView(selectedTag: $selectedTag)
-                    }
+                    .pickerStyle(.navigationLink)
                     
                     TextField("Description", text: $description)
                 }
                 Button("Submit"){
-                    viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: 1, duration: 45)
+                    viewModel.createSessions(date: selectedDate, description: description, startTime: fromTime, tagId: selectedTag, duration: 45)
                     description = ""
                 }
                 .font(.title)

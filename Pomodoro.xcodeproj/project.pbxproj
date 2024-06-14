@@ -30,6 +30,7 @@
 		740054E62C11E95800BAA474 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 740054E52C11E95800BAA474 /* Supabase */; };
 		740054E82C11E9A100BAA474 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E72C11E9A100BAA474 /* Supabase.swift */; };
 		740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E92C135C5700BAA474 /* OpeningView.swift */; };
+		747213B82C1C755900CD9BA3 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		740054D72C11E78100BAA474 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		740054E72C11E9A100BAA474 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		740054E92C135C5700BAA474 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
+		747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				740054D72C11E78100BAA474 /* JournalViewModel.swift */,
+				747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				740054C22C08ACF200BAA474 /* Planning.swift in Sources */,
 				740054D62C11E45400BAA474 /* TagSelectView.swift in Sources */,
 				740054CC2C0BC0C200BAA474 /* CircularProgressView.swift in Sources */,
+				747213B82C1C755900CD9BA3 /* PlanningViewModel.swift in Sources */,
 				740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */,
 				740054AD2C00E1C700BAA474 /* StudyTimer.swift in Sources */,
 				740054D22C0E48ED00BAA474 /* LandingView.swift in Sources */,
