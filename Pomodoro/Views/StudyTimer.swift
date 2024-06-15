@@ -194,7 +194,6 @@ struct StudyTimer: View {
                            binding: $model.selectedMinutesAmount)
         }
         .frame(width: 360, height: 255)
-        //.padding(.all, 32)
     }
     
     var progressView: some View {
@@ -217,8 +216,7 @@ struct StudyTimer: View {
     }
     
     var body: some View {
-        
-        
+       
         VStack {
             if model.state == .cancelled {
                 timePickerControl
@@ -232,10 +230,7 @@ struct StudyTimer: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
-        
-        
-        
+      
     }
     
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Journal: View {
+    //MARK: Stored properties
     @State private var isSearchVisible = false
     @State private var searchText = ""
     @State private var viewModel = JournalViewModel()
@@ -21,14 +22,8 @@ struct Journal: View {
         formatter.dateFormat = "MMMM yyyy"
         return formatter
     }
-    @State private var selectedTag = ""
     
-    struct ColorInfo: Identifiable {
-        let id = UUID()
-        var name = ""
-        var desc = Color.clear
-    }
-    
+    //MARK: Computed properties
     var body: some View {
         
         var nearestFutureSession: Session? {
@@ -41,11 +36,6 @@ struct Journal: View {
         NavigationStack{
             VStack{
                 HStack{
-//                    NavigationLink{
-//                        Planning()
-//                    } label: {
-//                        Label("", systemImage:"calendar")
-//                    }
                     Button {
                         presentingNewItemSheet = true
                     } label: {

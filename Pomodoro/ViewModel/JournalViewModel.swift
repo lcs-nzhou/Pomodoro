@@ -118,7 +118,7 @@ class JournalViewModel {
 
     func createSessions(date: Date, description: String, startTime: Date, tagId: Int, duration: Int) {
         
-        // Create a unit of asynchronous work to add the to-do item
+        // Create a unit of asynchronous work to add the session
         Task {
             
             // Create the new session item instance
@@ -129,7 +129,7 @@ class JournalViewModel {
             // Write it to the database
             do {
                 
-                // Insert the new to-do item, and then immediately select
+                // Insert the new session, and then immediately select
                 // it back out of the database
                 let newlyInsertedItem: NewSession = try await supabase
                     .from("session")

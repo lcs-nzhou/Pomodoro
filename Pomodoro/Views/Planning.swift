@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct Planning: View {
+    //MARK: Computed properties
     @State private var selectedDate = Date()
     @State private var fromTime = Date()
     @State private var forHowLong = Int()
     @State private var selectedTag = 1
     @State private var description = ""
     @State private var showTagSelection = false
+    
     // Binding to control whether this view is visible
     @Binding var showSheet: Bool
     
+    // Have access to the JournalViewModel
     @Environment(JournalViewModel.self) var viewModel
     
     @State private var planningViewModel = PlanningViewModel()
@@ -34,6 +37,7 @@ struct Planning: View {
            return calendar.date(from: dateComponents) ?? Date()
        }
     
+    //MARK: Computed properties
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {

@@ -30,7 +30,6 @@
 		740054E82C11E9A100BAA474 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E72C11E9A100BAA474 /* Supabase.swift */; };
 		740054EA2C135C5700BAA474 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740054E92C135C5700BAA474 /* OpeningView.swift */; };
 		747213B82C1C755900CD9BA3 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */; };
-		747213C02C1CAA1200CD9BA3 /* TagSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		740054E72C11E9A100BAA474 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		740054E92C135C5700BAA474 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
 		747213B72C1C755900CD9BA3 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
-		747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +122,6 @@
 				740054D12C0E48ED00BAA474 /* LandingView.swift */,
 				740054D32C0E525100BAA474 /* CustomTabView.swift */,
 				740054E92C135C5700BAA474 /* OpeningView.swift */,
-				747213BF2C1CAA1200CD9BA3 /* TagSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 				740054D42C0E525100BAA474 /* CustomTabView.swift in Sources */,
 				740054BC2C00F3D400BAA474 /* Achievement.swift in Sources */,
 				740054C02C05512100BAA474 /* Journal.swift in Sources */,
-				747213C02C1CAA1200CD9BA3 /* TagSelectionView.swift in Sources */,
 				740054C42C08B2D200BAA474 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
